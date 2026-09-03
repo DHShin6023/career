@@ -676,6 +676,146 @@ body {
     white-space: nowrap;
 }
 
+/* ===== Works ===== */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+.work-card {
+    background: var(--white);
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 44px rgba(26,41,66,0.1);
+    border-color: var(--gold);
+}
+
+.work-card:hover .work-link { color: var(--gold); }
+
+/* 캡처 비율이 서로 달라도 카드 높이가 흔들리지 않게 고정 높이 + 상단 정렬 */
+.work-thumb {
+    position: relative;
+    height: 190px;
+    background: var(--gray-bg);
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.work-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.work-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--gold);
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 5px 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26,41,66,0.18);
+}
+
+.work-body {
+    padding: 26px 26px 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.work-title {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+}
+
+.work-lead {
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.work-desc {
+    font-size: 0.86rem;
+    color: var(--text-mid);
+    line-height: 1.75;
+    flex: 1;
+}
+
+.work-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 18px;
+}
+
+.work-tag {
+    background: var(--gray-bg);
+    color: var(--text-mid);
+    border: 1px solid var(--border);
+    padding: 4px 11px;
+    border-radius: 12px;
+    font-size: 0.71rem;
+    font-weight: 500;
+}
+
+.work-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.work-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.work-live i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #22c55e;
+    display: inline-block;
+}
+
+.work-link {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-light);
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
 /* ===== Awards ===== */
 .awards-layout {
     display: grid;
@@ -965,6 +1105,7 @@ footer p {
     .timeline-content { padding-left: 0; margin-top: 10px; }
 
     .media-grid { grid-template-columns: 1fr; }
+    .works-grid { grid-template-columns: repeat(2, 1fr); }
     .awards-grid { grid-template-columns: 1fr; }
 
     .contact-card {
@@ -980,6 +1121,9 @@ footer p {
     .nav-links { display: none; }
 
     .achievements-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .works-grid { grid-template-columns: 1fr; }
+    .work-thumb { height: 210px; }
 
     .profile-frame {
         width: 230px;
