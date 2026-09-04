@@ -819,7 +819,8 @@ body {
 /* ===== Awards ===== */
 .awards-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* 사진이 있는 롯데 카드를 강조한다. 오른쪽 두 장은 텍스트뿐이라 좁아도 된다 */
+    grid-template-columns: 6.5fr 3.5fr;
     grid-template-rows: auto auto;
     gap: 24px;
 }
@@ -931,6 +932,8 @@ body {
     font-size: 0.84rem;
     color: rgba(255,255,255,0.58);
     line-height: 1.65;
+    /* 한국어는 기본값이면 어절 중간에서 잘린다("공식 인 / 증"). 어절 단위로 끊는다 */
+    word-break: keep-all;
 }
 
 /* ===== Contact ===== */
@@ -1072,6 +1075,15 @@ footer p {
 
     .works-grid { grid-template-columns: 1fr; }
     .work-thumb { height: 210px; }
+
+    .awards-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .award-lotte, .award-gs, .award-adsp {
+        grid-column: 1;
+        grid-row: auto;
+    }
 
     .profile-frame {
         width: 230px;
