@@ -1,0 +1,40 @@
+<!-- 카톡·검색 미리보기 이미지(assets/og-cover.png)의 생성기.
+     문구나 사진을 바꾸려면 이 파일을 고친 뒤 아래 명령으로 다시 뽑는다.
+
+     cd tools && python3 -m http.server 8020
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless \
+       --disable-gpu --hide-scrollbars --window-size=1200,630 \
+       --virtual-time-budget=12000 --screenshot=../assets/og-cover.png \
+       http://localhost:8020/og-cover.html
+-->
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:1200px;height:630px;overflow:hidden;
+       font-family:'Noto Sans KR',sans-serif;
+       background:linear-gradient(135deg,#0f1e38 0%,#1a2942 55%,#243552 100%);
+       display:flex;align-items:center;gap:64px;padding:0 80px;color:#fff}
+  .photo{width:300px;height:400px;flex:none;border-radius:20px;overflow:hidden;
+         border:3px solid #e8a020;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+  .photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  .tag{font-size:20px;font-weight:700;letter-spacing:.22em;color:#e8a020;margin-bottom:18px}
+  h1{font-size:82px;font-weight:900;letter-spacing:-.02em;line-height:1;margin-bottom:26px}
+  .lead{font-size:29px;font-weight:500;line-height:1.5;color:rgba(255,255,255,.88);
+        word-break:keep-all;margin-bottom:34px}
+  .lead b{color:#f0b84a;font-weight:700}
+  .chips{display:flex;gap:10px;flex-wrap:wrap}
+  .chip{font-size:19px;font-weight:500;color:rgba(255,255,255,.72);
+        border:1px solid rgba(232,160,32,.45);border-radius:999px;padding:8px 20px}
+</style>
+<div class="photo"><img src="../assets/profile.jpg"></div>
+<div>
+  <div class="tag">BUSINESS DEVELOPMENT</div>
+  <h1>신동환</h1>
+  <div class="lead">영업 관련 풍부한 경험과 탁월한 소통 능력에 기반한 <b>문제 해결사</b></div>
+  <div class="chips">
+    <span class="chip">17년 필드 영업</span>
+    <span class="chip">B2B 솔루션</span>
+    <span class="chip">데이터 기반 문제해결</span>
+  </div>
+</div>
