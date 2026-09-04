@@ -822,7 +822,6 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 24px;
-    margin-bottom: 64px;
 }
 
 /* 왼쪽 전체 높이: 롯데 */
@@ -932,57 +931,6 @@ body {
     font-size: 0.84rem;
     color: rgba(255,255,255,0.58);
     line-height: 1.65;
-}
-
-/* Education */
-.education-section {
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 52px;
-}
-
-.edu-title {
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: rgba(255,255,255,0.45);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-bottom: 28px;
-}
-
-.edu-items {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
-
-.edu-item {
-    display: flex;
-    gap: 36px;
-    align-items: baseline;
-}
-
-.edu-year {
-    font-size: 0.83rem;
-    color: rgba(255,255,255,0.45);
-    white-space: nowrap;
-    min-width: 165px;
-}
-
-.edu-info {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.edu-info strong {
-    font-size: 0.97rem;
-    color: var(--white);
-    font-weight: 600;
-}
-
-.edu-info span {
-    font-size: 0.83rem;
-    color: rgba(255,255,255,0.45);
 }
 
 /* ===== Contact ===== */
