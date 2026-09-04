@@ -820,7 +820,7 @@ body {
 .awards-layout {
     display: grid;
     /* 사진이 있는 롯데 카드를 강조한다. 오른쪽 두 장은 텍스트뿐이라 좁아도 된다 */
-    grid-template-columns: 6.5fr 3.5fr;
+    grid-template-columns: 6fr 4fr;
     grid-template-rows: auto auto;
     gap: 24px;
 }
