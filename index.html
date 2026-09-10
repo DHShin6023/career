@@ -31,7 +31,7 @@
     <!-- ?v= 는 캐시 무효화용. GitHub Pages가 CSS/JS에 10분 캐시를 걸어 두는데,
          파일명이 같으면 브라우저가 그 뒤로도 예전 사본을 계속 쓴다.
          style.css / script.js 를 고칠 때마다 이 날짜를 함께 올릴 것. -->
-    <link rel="stylesheet" href="style.css?v=20260904b">
+    <link rel="stylesheet" href="style.css?v=20260910">
 </head>
 <body>
 
@@ -397,8 +397,10 @@
             <div class="section-header fade-up">
                 <span class="section-tag">WORKS</span>
                 <h2>직접 만든 서비스</h2>
-                <p class="section-desc">기획부터 데이터 수집, 개발, 배포, 운영까지 직접 진행했습니다. 모두 지금 작동 중이며, 별도 설치나 가입 없이 바로 사용하실 수 있습니다.</p>
+                <p class="section-desc">기획부터 데이터 수집, 개발, 배포, 운영까지 모두 직접 진행했습니다. 여섯 개 전부 지금 작동 중입니다.</p>
             </div>
+            <div class="works-note fade-up"><i></i>지금 바로 써볼 수 있는 서비스 — 설치나 가입이 필요 없습니다</div>
+
             <div class="works-grid">
 
                 <a class="work-card fade-up" href="https://dhshin6023.github.io/sanggwon-curation/" target="_blank" rel="noopener noreferrer">
@@ -461,6 +463,85 @@
                         </div>
                     </div>
                 </a>
+
+            </div>
+
+            <!-- 하단 3개는 방문자가 자기 API 키를 넣어야 동작한다.
+                 눌러도 벽에 막히면 위쪽 세 개까지 신뢰가 깎이므로 링크를 걸지 않고
+                 "개발·운영 기록"으로 성격을 먼저 밝힌다. -->
+            <div class="works-note second fade-up"><i></i>개발·운영 기록 — 개인 API 키나 계정이 필요해 공개 링크는 두지 않았습니다</div>
+
+            <div class="works-grid">
+
+                <article class="work-card rec fade-up">
+                    <div class="work-thumb rec-thumb">
+                        <div class="rec-mark">
+                            <span class="rec-kind">DATA · AUTOMATION</span>
+                            <span class="rec-name">자동매매 봇</span>
+                            <span class="rec-meta">AWS EC2 · 상시 구동</span>
+                        </div>
+                    </div>
+                    <div class="work-body">
+                        <h3 class="work-title">업비트 자동매매 봇</h3>
+                        <p class="work-lead">사람 손을 거치지 않고 한 사이클이 도는 시스템</p>
+                        <p class="work-desc">매월 정액 적립부터 판정·주문 집행·알림까지 한 사이클이 사람의 개입 없이 돌아갑니다. AWS EC2에서 상시 구동되며, 전략 변경 때마다 회귀 테스트로 기존 동작을 지킵니다. 2026년 6월 개발, 2개월 시범 운영 후 8월 실거래 전환했습니다.</p>
+                        <div class="work-tags">
+                            <span class="work-tag">AWS EC2</span>
+                            <span class="work-tag">전략 엔진</span>
+                            <span class="work-tag">텔레그램 알림</span>
+                            <span class="work-tag">회귀 테스트</span>
+                        </div>
+                        <div class="work-footer">
+                            <span class="work-live rec"><i></i>운영 중</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card rec fade-up" style="transition-delay:0.1s">
+                    <div class="work-thumb rec-thumb">
+                        <div class="rec-mark">
+                            <span class="rec-kind">AI · RECOMMENDATION</span>
+                            <span class="rec-name">북 큐레이션</span>
+                            <span class="rec-meta">OpenRouter · PWA</span>
+                        </div>
+                    </div>
+                    <div class="work-body">
+                        <h3 class="work-title">북 큐레이션</h3>
+                        <p class="work-lead">읽고 싶은 기분을 단어로 적으면 책이 나옵니다</p>
+                        <p class="work-desc">떠오르는 단어 몇 개를 넣으면 AI가 실존하는 책을 골라 추천 이유와 함께 보여줍니다. 표지는 두 곳의 도서 API를 순서대로 시도해 한쪽이 막혀도 비지 않게 했습니다. 휴대폰에 설치해 앱처럼 쓰고, 결과를 그대로 공유할 수 있습니다.</p>
+                        <div class="work-tags">
+                            <span class="work-tag">OpenRouter</span>
+                            <span class="work-tag">도서 API 폴백</span>
+                            <span class="work-tag">PWA</span>
+                        </div>
+                        <div class="work-footer">
+                            <span class="work-live rec"><i></i>운영 중</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card rec fade-up" style="transition-delay:0.2s">
+                    <div class="work-thumb rec-thumb">
+                        <div class="rec-mark">
+                            <span class="rec-kind">AI · VISION</span>
+                            <span class="rec-name">천명관상</span>
+                            <span class="rec-meta">사주 계산 + 관상 분석</span>
+                        </div>
+                    </div>
+                    <div class="work-body">
+                        <h3 class="work-title">천명관상</h3>
+                        <p class="work-lead">계산과 이미지 인식을 한 결과로 합치는 실험</p>
+                        <p class="work-desc">생년월일시로 사주 여덟 글자를 직접 계산하고, 얼굴 사진은 AI Vision으로 분석해 둘을 하나의 풀이로 합칩니다. 만세력 계산은 외부 API 없이 코드로 구현했습니다. 규칙 기반 연산과 AI 분석을 한 화면에서 엮어본 작업입니다.</p>
+                        <div class="work-tags">
+                            <span class="work-tag">만세력 계산</span>
+                            <span class="work-tag">Vision API</span>
+                            <span class="work-tag">PWA</span>
+                        </div>
+                        <div class="work-footer">
+                            <span class="work-live rec"><i></i>운영 중</span>
+                        </div>
+                    </div>
+                </article>
 
             </div>
         </div>
